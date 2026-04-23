@@ -19,6 +19,7 @@ public class Main {
             System.out.println("Información no válida");
         }
         System.out.println("Su IMC es de: " + calculadoraIMC.getImc());
+        calculadoraIMC.interpretarDatos();
 
     }
 }
