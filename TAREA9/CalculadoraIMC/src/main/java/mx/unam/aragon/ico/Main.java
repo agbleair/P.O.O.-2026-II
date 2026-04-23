@@ -1,6 +1,7 @@
 package mx.unam.aragon.ico;
 
-import java.sql.SQLOutput;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -15,8 +16,10 @@ public class Main {
             System.out.println("Ingrese su altura");
             calculadoraIMC.setAltura(teclado.nextDouble());
             calculadoraIMC.calcularIMC();
-        } catch (Exception e) {
+        } catch (InputMismatchException e) {
             System.out.println("Información no válida");
+        } finally {
+            teclado.close();
         }
         System.out.println("Su IMC es de: " + calculadoraIMC.getImc());
         calculadoraIMC.interpretarDatos();
