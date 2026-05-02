@@ -10,8 +10,6 @@ public class Ventana extends Frame {
     CalculadoraIMC calculadoraIMC;
     Label resultado;
 
-
-
     public Ventana(){
 
     }
